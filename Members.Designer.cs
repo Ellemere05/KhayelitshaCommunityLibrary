@@ -80,6 +80,7 @@
             btnBack.TabIndex = 19;
             btnBack.Text = "Back";
             btnBack.UseVisualStyleBackColor = false;
+            btnBack.Click += btnBack_Click;
             // 
             // lblTitle
             // 
@@ -187,6 +188,7 @@
             btnClear.TabIndex = 11;
             btnClear.Text = "Clear";
             btnClear.UseVisualStyleBackColor = false;
+            btnClear.Click += btnClear_Click;
             // 
             // btnAdd
             // 
@@ -197,6 +199,7 @@
             btnAdd.TabIndex = 12;
             btnAdd.Text = "Add";
             btnAdd.UseVisualStyleBackColor = false;
+            btnAdd.Click += btnAdd_Click;
             // 
             // btnUpdate
             // 
@@ -207,6 +210,7 @@
             btnUpdate.TabIndex = 13;
             btnUpdate.Text = "Update";
             btnUpdate.UseVisualStyleBackColor = false;
+            btnUpdate.Click += btnUpdate_Click;
             // 
             // btnDelete
             // 
@@ -217,6 +221,7 @@
             btnDelete.TabIndex = 14;
             btnDelete.Text = "Delete";
             btnDelete.UseVisualStyleBackColor = false;
+            btnDelete.Click += btnDelete_Click;
             // 
             // pnlLeft
             // 
@@ -275,6 +280,7 @@
             dgvMembers.RowHeadersWidth = 51;
             dgvMembers.Size = new Size(463, 334);
             dgvMembers.TabIndex = 3;
+            dgvMembers.CellClick += dgvMembers_CellClick;
             // 
             // lblSearch
             // 
@@ -295,6 +301,7 @@
             btnSearch.TabIndex = 2;
             btnSearch.Text = "Search";
             btnSearch.UseVisualStyleBackColor = false;
+            btnSearch.Click += btnSearch_Click;
             // 
             // Members
             // 

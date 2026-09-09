@@ -29,42 +29,42 @@
         private void InitializeComponent()
         {
             pnlTitle = new Panel();
+            btnBack = new Button();
             lblTitle = new Label();
             lblLearner = new Label();
             pnlBookTitles = new Panel();
-            pnlBookCopies = new Panel();
-            lblBookTitles = new Label();
-            lblTitles = new Label();
-            lblAuthor = new Label();
-            lblGenre = new Label();
-            lblISBN = new Label();
-            lblYear = new Label();
-            txtAuthor = new TextBox();
-            txtTitle = new TextBox();
-            txtISBN = new TextBox();
-            cmbGenre = new ComboBox();
-            numYear = new NumericUpDown();
-            btnClearTitle = new Button();
-            btnAddTitle = new Button();
-            btnUpdateTitle = new Button();
-            dgvTitles = new DataGridView();
             txtSearchTitle = new TextBox();
             lblSearchTitle = new Label();
             btnSearchTitle = new Button();
-            btnBack = new Button();
-            lblCopies = new Label();
-            lblCopyTitle = new Label();
-            lblStatus = new Label();
-            cmbTitle = new ComboBox();
-            cmbStatus = new ComboBox();
-            btnAddCopies = new Button();
-            btnUpdateCopies = new Button();
+            dgvTitles = new DataGridView();
+            btnUpdateTitle = new Button();
+            btnAddTitle = new Button();
+            btnClearTitle = new Button();
+            numYear = new NumericUpDown();
+            cmbGenre = new ComboBox();
+            txtISBN = new TextBox();
+            txtTitle = new TextBox();
+            txtAuthor = new TextBox();
+            lblYear = new Label();
+            lblISBN = new Label();
+            lblGenre = new Label();
+            lblAuthor = new Label();
+            lblTitles = new Label();
+            lblBookTitles = new Label();
+            pnlBookCopies = new Panel();
             dgvCopies = new DataGridView();
+            btnUpdateCopies = new Button();
+            btnAddCopies = new Button();
+            cmbStatus = new ComboBox();
+            cmbTitle = new ComboBox();
+            lblStatus = new Label();
+            lblCopyTitle = new Label();
+            lblCopies = new Label();
             pnlTitle.SuspendLayout();
             pnlBookTitles.SuspendLayout();
-            pnlBookCopies.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)numYear).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dgvTitles).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)numYear).BeginInit();
+            pnlBookCopies.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvCopies).BeginInit();
             SuspendLayout();
             // 
@@ -78,6 +78,19 @@
             pnlTitle.Name = "pnlTitle";
             pnlTitle.Size = new Size(933, 75);
             pnlTitle.TabIndex = 1;
+            // 
+            // btnBack
+            // 
+            btnBack.BackColor = Color.DarkSlateGray;
+            btnBack.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnBack.ForeColor = SystemColors.Control;
+            btnBack.Location = new Point(845, 26);
+            btnBack.Name = "btnBack";
+            btnBack.Size = new Size(75, 30);
+            btnBack.TabIndex = 18;
+            btnBack.Text = "Back";
+            btnBack.UseVisualStyleBackColor = false;
+            btnBack.Click += btnBack_Click;
             // 
             // lblTitle
             // 
@@ -127,156 +140,6 @@
             pnlBookTitles.Size = new Size(908, 308);
             pnlBookTitles.TabIndex = 2;
             // 
-            // pnlBookCopies
-            // 
-            pnlBookCopies.BackColor = SystemColors.ControlLight;
-            pnlBookCopies.Controls.Add(dgvCopies);
-            pnlBookCopies.Controls.Add(btnUpdateCopies);
-            pnlBookCopies.Controls.Add(btnAddCopies);
-            pnlBookCopies.Controls.Add(cmbStatus);
-            pnlBookCopies.Controls.Add(cmbTitle);
-            pnlBookCopies.Controls.Add(lblStatus);
-            pnlBookCopies.Controls.Add(lblCopyTitle);
-            pnlBookCopies.Controls.Add(lblCopies);
-            pnlBookCopies.Location = new Point(12, 404);
-            pnlBookCopies.Name = "pnlBookCopies";
-            pnlBookCopies.Size = new Size(908, 187);
-            pnlBookCopies.TabIndex = 0;
-            // 
-            // lblBookTitles
-            // 
-            lblBookTitles.AutoSize = true;
-            lblBookTitles.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblBookTitles.Location = new Point(18, 9);
-            lblBookTitles.Name = "lblBookTitles";
-            lblBookTitles.Size = new Size(99, 23);
-            lblBookTitles.TabIndex = 0;
-            lblBookTitles.Text = "Book Titles";
-            // 
-            // lblTitles
-            // 
-            lblTitles.AutoSize = true;
-            lblTitles.Location = new Point(18, 44);
-            lblTitles.Name = "lblTitles";
-            lblTitles.Size = new Size(38, 20);
-            lblTitles.TabIndex = 1;
-            lblTitles.Text = "Title";
-            // 
-            // lblAuthor
-            // 
-            lblAuthor.AutoSize = true;
-            lblAuthor.Location = new Point(18, 86);
-            lblAuthor.Name = "lblAuthor";
-            lblAuthor.Size = new Size(54, 20);
-            lblAuthor.TabIndex = 2;
-            lblAuthor.Text = "Author";
-            // 
-            // lblGenre
-            // 
-            lblGenre.AutoSize = true;
-            lblGenre.Location = new Point(18, 128);
-            lblGenre.Name = "lblGenre";
-            lblGenre.Size = new Size(48, 20);
-            lblGenre.TabIndex = 3;
-            lblGenre.Text = "Genre";
-            // 
-            // lblISBN
-            // 
-            lblISBN.AutoSize = true;
-            lblISBN.Location = new Point(18, 174);
-            lblISBN.Name = "lblISBN";
-            lblISBN.Size = new Size(41, 20);
-            lblISBN.TabIndex = 4;
-            lblISBN.Text = "ISBN";
-            // 
-            // lblYear
-            // 
-            lblYear.AutoSize = true;
-            lblYear.Location = new Point(18, 215);
-            lblYear.Name = "lblYear";
-            lblYear.Size = new Size(37, 20);
-            lblYear.TabIndex = 5;
-            lblYear.Text = "Year";
-            // 
-            // txtAuthor
-            // 
-            txtAuthor.Location = new Point(87, 83);
-            txtAuthor.Name = "txtAuthor";
-            txtAuthor.Size = new Size(243, 27);
-            txtAuthor.TabIndex = 6;
-            // 
-            // txtTitle
-            // 
-            txtTitle.Location = new Point(87, 41);
-            txtTitle.Name = "txtTitle";
-            txtTitle.Size = new Size(243, 27);
-            txtTitle.TabIndex = 7;
-            // 
-            // txtISBN
-            // 
-            txtISBN.Location = new Point(87, 171);
-            txtISBN.Name = "txtISBN";
-            txtISBN.Size = new Size(243, 27);
-            txtISBN.TabIndex = 8;
-            // 
-            // cmbGenre
-            // 
-            cmbGenre.FormattingEnabled = true;
-            cmbGenre.Location = new Point(87, 125);
-            cmbGenre.Name = "cmbGenre";
-            cmbGenre.Size = new Size(243, 28);
-            cmbGenre.TabIndex = 10;
-            // 
-            // numYear
-            // 
-            numYear.Location = new Point(87, 213);
-            numYear.Maximum = new decimal(new int[] { 2026, 0, 0, 0 });
-            numYear.Minimum = new decimal(new int[] { 1899, 0, 0, 0 });
-            numYear.Name = "numYear";
-            numYear.Size = new Size(243, 27);
-            numYear.TabIndex = 11;
-            numYear.Value = new decimal(new int[] { 1899, 0, 0, 0 });
-            numYear.ValueChanged += numYear_ValueChanged;
-            // 
-            // btnClearTitle
-            // 
-            btnClearTitle.BackColor = Color.LightSkyBlue;
-            btnClearTitle.Location = new Point(233, 248);
-            btnClearTitle.Name = "btnClearTitle";
-            btnClearTitle.Size = new Size(100, 45);
-            btnClearTitle.TabIndex = 12;
-            btnClearTitle.Text = "Clear";
-            btnClearTitle.UseVisualStyleBackColor = false;
-            // 
-            // btnAddTitle
-            // 
-            btnAddTitle.BackColor = Color.PaleGreen;
-            btnAddTitle.Location = new Point(21, 248);
-            btnAddTitle.Name = "btnAddTitle";
-            btnAddTitle.Size = new Size(100, 45);
-            btnAddTitle.TabIndex = 13;
-            btnAddTitle.Text = "Add";
-            btnAddTitle.UseVisualStyleBackColor = false;
-            // 
-            // btnUpdateTitle
-            // 
-            btnUpdateTitle.BackColor = Color.Khaki;
-            btnUpdateTitle.Location = new Point(127, 248);
-            btnUpdateTitle.Name = "btnUpdateTitle";
-            btnUpdateTitle.Size = new Size(100, 45);
-            btnUpdateTitle.TabIndex = 14;
-            btnUpdateTitle.Text = "Update";
-            btnUpdateTitle.UseVisualStyleBackColor = false;
-            // 
-            // dgvTitles
-            // 
-            dgvTitles.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvTitles.Location = new Point(349, 44);
-            dgvTitles.Name = "dgvTitles";
-            dgvTitles.RowHeadersWidth = 51;
-            dgvTitles.Size = new Size(545, 249);
-            dgvTitles.TabIndex = 15;
-            // 
             // txtSearchTitle
             // 
             txtSearchTitle.Location = new Point(406, 8);
@@ -302,18 +165,226 @@
             btnSearchTitle.TabIndex = 18;
             btnSearchTitle.Text = "Search";
             btnSearchTitle.UseVisualStyleBackColor = false;
+            btnSearchTitle.Click += btnSearchTitle_Click;
             // 
-            // btnBack
+            // dgvTitles
             // 
-            btnBack.BackColor = Color.DarkSlateGray;
-            btnBack.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnBack.ForeColor = SystemColors.Control;
-            btnBack.Location = new Point(845, 26);
-            btnBack.Name = "btnBack";
-            btnBack.Size = new Size(75, 30);
-            btnBack.TabIndex = 18;
-            btnBack.Text = "Back";
-            btnBack.UseVisualStyleBackColor = false;
+            dgvTitles.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvTitles.Location = new Point(349, 44);
+            dgvTitles.Name = "dgvTitles";
+            dgvTitles.RowHeadersWidth = 51;
+            dgvTitles.Size = new Size(545, 249);
+            dgvTitles.TabIndex = 15;
+            dgvTitles.CellClick += dgvTitles_CellClick;
+            // 
+            // btnUpdateTitle
+            // 
+            btnUpdateTitle.BackColor = Color.Khaki;
+            btnUpdateTitle.Location = new Point(127, 248);
+            btnUpdateTitle.Name = "btnUpdateTitle";
+            btnUpdateTitle.Size = new Size(100, 45);
+            btnUpdateTitle.TabIndex = 14;
+            btnUpdateTitle.Text = "Update";
+            btnUpdateTitle.UseVisualStyleBackColor = false;
+            btnUpdateTitle.Click += btnUpdateTitle_Click;
+            // 
+            // btnAddTitle
+            // 
+            btnAddTitle.BackColor = Color.PaleGreen;
+            btnAddTitle.Location = new Point(21, 248);
+            btnAddTitle.Name = "btnAddTitle";
+            btnAddTitle.Size = new Size(100, 45);
+            btnAddTitle.TabIndex = 13;
+            btnAddTitle.Text = "Add";
+            btnAddTitle.UseVisualStyleBackColor = false;
+            btnAddTitle.Click += btnAddTitle_Click;
+            // 
+            // btnClearTitle
+            // 
+            btnClearTitle.BackColor = Color.LightSkyBlue;
+            btnClearTitle.Location = new Point(233, 248);
+            btnClearTitle.Name = "btnClearTitle";
+            btnClearTitle.Size = new Size(100, 45);
+            btnClearTitle.TabIndex = 12;
+            btnClearTitle.Text = "Clear";
+            btnClearTitle.UseVisualStyleBackColor = false;
+            btnClearTitle.Click += btnClearTitle_Click;
+            // 
+            // numYear
+            // 
+            numYear.Location = new Point(87, 213);
+            numYear.Maximum = new decimal(new int[] { 2026, 0, 0, 0 });
+            numYear.Minimum = new decimal(new int[] { 1899, 0, 0, 0 });
+            numYear.Name = "numYear";
+            numYear.Size = new Size(243, 27);
+            numYear.TabIndex = 11;
+            numYear.Value = new decimal(new int[] { 1899, 0, 0, 0 });
+            // 
+            // cmbGenre
+            // 
+            cmbGenre.FormattingEnabled = true;
+            cmbGenre.Location = new Point(87, 125);
+            cmbGenre.Name = "cmbGenre";
+            cmbGenre.Size = new Size(243, 28);
+            cmbGenre.TabIndex = 10;
+            // 
+            // txtISBN
+            // 
+            txtISBN.Location = new Point(87, 171);
+            txtISBN.Name = "txtISBN";
+            txtISBN.Size = new Size(243, 27);
+            txtISBN.TabIndex = 8;
+            // 
+            // txtTitle
+            // 
+            txtTitle.Location = new Point(87, 41);
+            txtTitle.Name = "txtTitle";
+            txtTitle.Size = new Size(243, 27);
+            txtTitle.TabIndex = 7;
+            // 
+            // txtAuthor
+            // 
+            txtAuthor.Location = new Point(87, 83);
+            txtAuthor.Name = "txtAuthor";
+            txtAuthor.Size = new Size(243, 27);
+            txtAuthor.TabIndex = 6;
+            // 
+            // lblYear
+            // 
+            lblYear.AutoSize = true;
+            lblYear.Location = new Point(18, 215);
+            lblYear.Name = "lblYear";
+            lblYear.Size = new Size(37, 20);
+            lblYear.TabIndex = 5;
+            lblYear.Text = "Year";
+            // 
+            // lblISBN
+            // 
+            lblISBN.AutoSize = true;
+            lblISBN.Location = new Point(18, 174);
+            lblISBN.Name = "lblISBN";
+            lblISBN.Size = new Size(41, 20);
+            lblISBN.TabIndex = 4;
+            lblISBN.Text = "ISBN";
+            // 
+            // lblGenre
+            // 
+            lblGenre.AutoSize = true;
+            lblGenre.Location = new Point(18, 128);
+            lblGenre.Name = "lblGenre";
+            lblGenre.Size = new Size(48, 20);
+            lblGenre.TabIndex = 3;
+            lblGenre.Text = "Genre";
+            // 
+            // lblAuthor
+            // 
+            lblAuthor.AutoSize = true;
+            lblAuthor.Location = new Point(18, 86);
+            lblAuthor.Name = "lblAuthor";
+            lblAuthor.Size = new Size(54, 20);
+            lblAuthor.TabIndex = 2;
+            lblAuthor.Text = "Author";
+            // 
+            // lblTitles
+            // 
+            lblTitles.AutoSize = true;
+            lblTitles.Location = new Point(18, 44);
+            lblTitles.Name = "lblTitles";
+            lblTitles.Size = new Size(38, 20);
+            lblTitles.TabIndex = 1;
+            lblTitles.Text = "Title";
+            // 
+            // lblBookTitles
+            // 
+            lblBookTitles.AutoSize = true;
+            lblBookTitles.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblBookTitles.Location = new Point(18, 9);
+            lblBookTitles.Name = "lblBookTitles";
+            lblBookTitles.Size = new Size(99, 23);
+            lblBookTitles.TabIndex = 0;
+            lblBookTitles.Text = "Book Titles";
+            // 
+            // pnlBookCopies
+            // 
+            pnlBookCopies.BackColor = SystemColors.ControlLight;
+            pnlBookCopies.Controls.Add(dgvCopies);
+            pnlBookCopies.Controls.Add(btnUpdateCopies);
+            pnlBookCopies.Controls.Add(btnAddCopies);
+            pnlBookCopies.Controls.Add(cmbStatus);
+            pnlBookCopies.Controls.Add(cmbTitle);
+            pnlBookCopies.Controls.Add(lblStatus);
+            pnlBookCopies.Controls.Add(lblCopyTitle);
+            pnlBookCopies.Controls.Add(lblCopies);
+            pnlBookCopies.Location = new Point(12, 404);
+            pnlBookCopies.Name = "pnlBookCopies";
+            pnlBookCopies.Size = new Size(908, 187);
+            pnlBookCopies.TabIndex = 0;
+            // 
+            // dgvCopies
+            // 
+            dgvCopies.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvCopies.Location = new Point(418, 16);
+            dgvCopies.Name = "dgvCopies";
+            dgvCopies.RowHeadersWidth = 51;
+            dgvCopies.Size = new Size(476, 155);
+            dgvCopies.TabIndex = 7;
+            dgvCopies.CellClick += dgvCopies_CellClick;
+            // 
+            // btnUpdateCopies
+            // 
+            btnUpdateCopies.BackColor = Color.Khaki;
+            btnUpdateCopies.Location = new Point(224, 126);
+            btnUpdateCopies.Name = "btnUpdateCopies";
+            btnUpdateCopies.Size = new Size(150, 45);
+            btnUpdateCopies.TabIndex = 6;
+            btnUpdateCopies.Text = "Update";
+            btnUpdateCopies.UseVisualStyleBackColor = false;
+            btnUpdateCopies.Click += btnUpdateCopies_Click;
+            // 
+            // btnAddCopies
+            // 
+            btnAddCopies.BackColor = Color.PaleGreen;
+            btnAddCopies.Location = new Point(43, 126);
+            btnAddCopies.Name = "btnAddCopies";
+            btnAddCopies.Size = new Size(150, 45);
+            btnAddCopies.TabIndex = 5;
+            btnAddCopies.Text = "Add";
+            btnAddCopies.UseVisualStyleBackColor = false;
+            btnAddCopies.Click += btnAddCopies_Click;
+            // 
+            // cmbStatus
+            // 
+            cmbStatus.FormattingEnabled = true;
+            cmbStatus.Location = new Point(87, 86);
+            cmbStatus.Name = "cmbStatus";
+            cmbStatus.Size = new Size(313, 28);
+            cmbStatus.TabIndex = 4;
+            // 
+            // cmbTitle
+            // 
+            cmbTitle.FormattingEnabled = true;
+            cmbTitle.Location = new Point(87, 42);
+            cmbTitle.Name = "cmbTitle";
+            cmbTitle.Size = new Size(313, 28);
+            cmbTitle.TabIndex = 3;
+            // 
+            // lblStatus
+            // 
+            lblStatus.AutoSize = true;
+            lblStatus.Location = new Point(22, 89);
+            lblStatus.Name = "lblStatus";
+            lblStatus.Size = new Size(49, 20);
+            lblStatus.TabIndex = 2;
+            lblStatus.Text = "Status";
+            // 
+            // lblCopyTitle
+            // 
+            lblCopyTitle.AutoSize = true;
+            lblCopyTitle.Location = new Point(21, 45);
+            lblCopyTitle.Name = "lblCopyTitle";
+            lblCopyTitle.Size = new Size(38, 20);
+            lblCopyTitle.TabIndex = 1;
+            lblCopyTitle.Text = "Title";
             // 
             // lblCopies
             // 
@@ -325,70 +396,6 @@
             lblCopies.TabIndex = 0;
             lblCopies.Text = "Book Copies";
             // 
-            // lblCopyTitle
-            // 
-            lblCopyTitle.AutoSize = true;
-            lblCopyTitle.Location = new Point(21, 45);
-            lblCopyTitle.Name = "lblCopyTitle";
-            lblCopyTitle.Size = new Size(38, 20);
-            lblCopyTitle.TabIndex = 1;
-            lblCopyTitle.Text = "Title";
-            // 
-            // lblStatus
-            // 
-            lblStatus.AutoSize = true;
-            lblStatus.Location = new Point(22, 89);
-            lblStatus.Name = "lblStatus";
-            lblStatus.Size = new Size(49, 20);
-            lblStatus.TabIndex = 2;
-            lblStatus.Text = "Status";
-            // 
-            // cmbTitle
-            // 
-            cmbTitle.FormattingEnabled = true;
-            cmbTitle.Location = new Point(87, 42);
-            cmbTitle.Name = "cmbTitle";
-            cmbTitle.Size = new Size(313, 28);
-            cmbTitle.TabIndex = 3;
-            // 
-            // cmbStatus
-            // 
-            cmbStatus.FormattingEnabled = true;
-            cmbStatus.Location = new Point(87, 86);
-            cmbStatus.Name = "cmbStatus";
-            cmbStatus.Size = new Size(313, 28);
-            cmbStatus.TabIndex = 4;
-            // 
-            // btnAddCopies
-            // 
-            btnAddCopies.BackColor = Color.PaleGreen;
-            btnAddCopies.Location = new Point(43, 126);
-            btnAddCopies.Name = "btnAddCopies";
-            btnAddCopies.Size = new Size(150, 45);
-            btnAddCopies.TabIndex = 5;
-            btnAddCopies.Text = "Add";
-            btnAddCopies.UseVisualStyleBackColor = false;
-            // 
-            // btnUpdateCopies
-            // 
-            btnUpdateCopies.BackColor = Color.Khaki;
-            btnUpdateCopies.Location = new Point(224, 126);
-            btnUpdateCopies.Name = "btnUpdateCopies";
-            btnUpdateCopies.Size = new Size(150, 45);
-            btnUpdateCopies.TabIndex = 6;
-            btnUpdateCopies.Text = "Update";
-            btnUpdateCopies.UseVisualStyleBackColor = false;
-            btnUpdateCopies.Click += button2_Click;
-            // 
-            // dgvCopies
-            // 
-            dgvCopies.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvCopies.Location = new Point(418, 16);
-            dgvCopies.Name = "dgvCopies";
-            dgvCopies.RowHeadersWidth = 51;
-            dgvCopies.Size = new Size(476, 155);
-            dgvCopies.TabIndex = 7;
-            // 
             // Books
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -399,14 +406,15 @@
             Controls.Add(pnlTitle);
             Name = "Books";
             Text = "Book Titles and Copies";
+            Load += Books_Load;
             pnlTitle.ResumeLayout(false);
             pnlTitle.PerformLayout();
             pnlBookTitles.ResumeLayout(false);
             pnlBookTitles.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)dgvTitles).EndInit();
+            ((System.ComponentModel.ISupportInitialize)numYear).EndInit();
             pnlBookCopies.ResumeLayout(false);
             pnlBookCopies.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)numYear).EndInit();
-            ((System.ComponentModel.ISupportInitialize)dgvTitles).EndInit();
             ((System.ComponentModel.ISupportInitialize)dgvCopies).EndInit();
             ResumeLayout(false);
         }

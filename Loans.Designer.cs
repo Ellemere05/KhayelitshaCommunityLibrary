@@ -56,7 +56,7 @@
             lblReturn = new Label();
             btnReturnBook = new Button();
             dtpReturnDate = new DateTimePicker();
-            textBox2 = new TextBox();
+            txtLoanID = new TextBox();
             lblReturnDate = new Label();
             lblLoanID = new Label();
             pnlTitle.SuspendLayout();
@@ -88,6 +88,7 @@
             btnBack.TabIndex = 18;
             btnBack.Text = "Back";
             btnBack.UseVisualStyleBackColor = false;
+            btnBack.Click += btnBack_Click;
             // 
             // lblTitle
             // 
@@ -113,6 +114,7 @@
             // 
             // pnlLoans
             // 
+            pnlLoans.BackColor = SystemColors.ControlLight;
             pnlLoans.Controls.Add(lblLoanTitle);
             pnlLoans.Controls.Add(btnIssueBook);
             pnlLoans.Controls.Add(dtpDueDate);
@@ -149,6 +151,7 @@
             btnIssueBook.TabIndex = 10;
             btnIssueBook.Text = "Issue Book";
             btnIssueBook.UseVisualStyleBackColor = false;
+            btnIssueBook.Click += btnIssueBook_Click;
             // 
             // dtpDueDate
             // 
@@ -235,6 +238,7 @@
             // 
             // pnlResults
             // 
+            pnlResults.BackColor = SystemColors.ControlLight;
             pnlResults.Controls.Add(dgvLoanHistory);
             pnlResults.Controls.Add(cmbFilter);
             pnlResults.Controls.Add(btnSearch);
@@ -254,6 +258,7 @@
             dgvLoanHistory.RowHeadersWidth = 51;
             dgvLoanHistory.Size = new Size(880, 174);
             dgvLoanHistory.TabIndex = 6;
+            dgvLoanHistory.CellClick += dgvLoans_CellClick;
             // 
             // cmbFilter
             // 
@@ -262,6 +267,7 @@
             cmbFilter.Name = "cmbFilter";
             cmbFilter.Size = new Size(151, 28);
             cmbFilter.TabIndex = 5;
+            cmbFilter.SelectedIndexChanged += cmbFilter_SelectedIndexChanged;
             // 
             // btnSearch
             // 
@@ -272,6 +278,7 @@
             btnSearch.TabIndex = 4;
             btnSearch.Text = "Search";
             btnSearch.UseVisualStyleBackColor = false;
+            btnSearch.Click += btnSearch_Click;
             // 
             // txtSearch
             // 
@@ -301,10 +308,11 @@
             // 
             // pnlReturns
             // 
+            pnlReturns.BackColor = SystemColors.ControlLight;
             pnlReturns.Controls.Add(lblReturn);
             pnlReturns.Controls.Add(btnReturnBook);
             pnlReturns.Controls.Add(dtpReturnDate);
-            pnlReturns.Controls.Add(textBox2);
+            pnlReturns.Controls.Add(txtLoanID);
             pnlReturns.Controls.Add(lblReturnDate);
             pnlReturns.Controls.Add(lblLoanID);
             pnlReturns.Location = new Point(562, 91);
@@ -331,6 +339,7 @@
             btnReturnBook.TabIndex = 4;
             btnReturnBook.Text = "Return Book";
             btnReturnBook.UseVisualStyleBackColor = false;
+            btnReturnBook.Click += btnReturnBook_Click;
             // 
             // dtpReturnDate
             // 
@@ -338,15 +347,14 @@
             dtpReturnDate.Name = "dtpReturnDate";
             dtpReturnDate.Size = new Size(218, 27);
             dtpReturnDate.TabIndex = 3;
-            dtpReturnDate.ValueChanged += dateTimePicker3_ValueChanged;
             // 
-            // textBox2
+            // txtLoanID
             // 
-            textBox2.Location = new Point(116, 58);
-            textBox2.Name = "textBox2";
-            textBox2.ReadOnly = true;
-            textBox2.Size = new Size(218, 27);
-            textBox2.TabIndex = 2;
+            txtLoanID.Location = new Point(116, 58);
+            txtLoanID.Name = "txtLoanID";
+            txtLoanID.ReadOnly = true;
+            txtLoanID.Size = new Size(218, 27);
+            txtLoanID.TabIndex = 2;
             // 
             // lblReturnDate
             // 
@@ -377,6 +385,7 @@
             Controls.Add(pnlTitle);
             Name = "Loans";
             Text = "Loans and Returns";
+            Load += Loans_Load;
             pnlTitle.ResumeLayout(false);
             pnlTitle.PerformLayout();
             pnlLoans.ResumeLayout(false);
@@ -419,7 +428,7 @@
         private Label lblReturn;
         private Button btnReturnBook;
         private DateTimePicker dtpReturnDate;
-        private TextBox textBox2;
+        private TextBox txtLoanID;
         private Label lblReturnDate;
         private Label lblLoanID;
     }

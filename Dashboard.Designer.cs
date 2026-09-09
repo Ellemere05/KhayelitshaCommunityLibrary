@@ -36,7 +36,7 @@
             lblLearner = new Label();
             lblSubtitle = new Label();
             pnlTitle = new Panel();
-            button1 = new Button();
+            btnReports = new Button();
             pnlTitle.SuspendLayout();
             SuspendLayout();
             // 
@@ -49,6 +49,7 @@
             btnMembers.TabIndex = 0;
             btnMembers.Text = "Manage Members";
             btnMembers.UseVisualStyleBackColor = true;
+            btnMembers.Click += btnMembers_Click;
             // 
             // btnLoans
             // 
@@ -59,6 +60,7 @@
             btnLoans.TabIndex = 1;
             btnLoans.Text = "Loans And Returns";
             btnLoans.UseVisualStyleBackColor = true;
+            btnLoans.Click += btnLoans_Click;
             // 
             // btnExit
             // 
@@ -71,6 +73,7 @@
             btnExit.TabIndex = 2;
             btnExit.Text = "EXIT";
             btnExit.UseVisualStyleBackColor = false;
+            btnExit.Click += btnExit_Click;
             // 
             // btnBooks
             // 
@@ -81,6 +84,7 @@
             btnBooks.TabIndex = 3;
             btnBooks.Text = "Manage Books";
             btnBooks.UseVisualStyleBackColor = true;
+            btnBooks.Click += btnBooks_Click;
             // 
             // lblTitle
             // 
@@ -92,7 +96,6 @@
             lblTitle.Size = new Size(422, 37);
             lblTitle.TabIndex = 4;
             lblTitle.Text = "Khayelitsha Community Library";
-            lblTitle.Click += lblTitle_Click;
             // 
             // lblLearner
             // 
@@ -104,7 +107,6 @@
             lblLearner.Size = new Size(285, 20);
             lblLearner.TabIndex = 5;
             lblLearner.Text = "Amy-Lee Baker | 20240116 | FA2 | MDB622";
-            lblLearner.Click += lblLearner_Click;
             // 
             // lblSubtitle
             // 
@@ -128,22 +130,23 @@
             pnlTitle.Size = new Size(668, 127);
             pnlTitle.TabIndex = 7;
             // 
-            // button1
+            // btnReports
             // 
-            button1.Location = new Point(133, 385);
-            button1.Margin = new Padding(3, 4, 3, 4);
-            button1.Name = "button1";
-            button1.Size = new Size(350, 60);
-            button1.TabIndex = 8;
-            button1.Text = "Reports";
-            button1.UseVisualStyleBackColor = true;
+            btnReports.Location = new Point(133, 385);
+            btnReports.Margin = new Padding(3, 4, 3, 4);
+            btnReports.Name = "btnReports";
+            btnReports.Size = new Size(350, 60);
+            btnReports.TabIndex = 8;
+            btnReports.Text = "Reports";
+            btnReports.UseVisualStyleBackColor = true;
+            btnReports.Click += btnReports_Click;
             // 
             // Dashboard
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(632, 553);
-            Controls.Add(button1);
+            Controls.Add(btnReports);
             Controls.Add(pnlTitle);
             Controls.Add(btnBooks);
             Controls.Add(btnExit);
@@ -168,6 +171,6 @@
         private Label lblLearner;
         private Label lblSubtitle;
         private Panel pnlTitle;
-        private Button button1;
+        private Button btnReports;
     }
 }
