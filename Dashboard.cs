@@ -6,5 +6,15 @@ namespace KhayelitshaCommunityLibrary
         {
             InitializeComponent();
         }
+
+        private void lblLearner_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblTitle_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

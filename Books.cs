@@ -16,5 +16,15 @@ namespace KhayelitshaCommunityLibrary
         {
             InitializeComponent();
         }
+
+        private void numYear_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

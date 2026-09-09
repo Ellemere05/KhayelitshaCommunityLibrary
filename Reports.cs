@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace KhayelitshaCommunityLibrary
 {
-    public partial class Loans : Form
+    public partial class Reports : Form
     {
-        public Loans()
+        public Reports()
         {
             InitializeComponent();
-        }
-
-        private void dateTimePicker3_ValueChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }
